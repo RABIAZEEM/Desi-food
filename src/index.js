@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-
+import '../src/assets/fonts/fonts.css';
 import reportWebVitals from './reportWebVitals';
 import Router from './application/Router';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+    
  <Router/>
 );
 

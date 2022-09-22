@@ -1,37 +1,39 @@
 import React from 'react'
+// import { Link } from 'react-router-dom'
+import logo from '../assets/img/logo.png'
+import img from '../assets/img/heart.png'
+import '../styles/Home.css'
 import { Link } from 'react-router-dom'
 
 function Header() {
   return (
-    <div>
-    <nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <Link to="/Recetas" class="navbar-brand">Recetas</Link>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
     
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+    
+    
+<nav className="navbar navbar-expand-xl header navbar-light bg-light">
+  <div className="container-fluid">
+    <Link to="/" className="navbar-brand">Desi Recipies</Link>
+    <img src={logo} alt="logo" className='logo'/>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBasic" aria-controls="navbarBasic" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarBasic">
+      <ul className="navbar-nav me-auto mb-2 mb-xl-0 ">
+        <li className="nav-item align-itmes-center  d-flex align-items-center">
+          <Link to="/Login" className="nav-link active" aria-current="page" >LogIn</Link>
+          
+          <img src={img} alt="heart" className='heart'/>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
+       
       </ul>
+      <form className="d-flex">
+        <input className="form-control me-2" type="search" placeholder="Find a recipe" aria-label="find a recipe"></input>
+        <button className="btn btn-outline-success" type="submit">Search</button>
+      </form>
+
     </div>
   </div>
 </nav>
-</div>
-    
   )
 }
 
