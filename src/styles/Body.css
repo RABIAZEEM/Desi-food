@@ -8,12 +8,20 @@
     height: 100%;
     object-fit:cover;
 }
-.Catagories{
+.fw-light{
     margin-top: 50px;
 }
-.card shadow-sm{
+.item-recipe{
+   min-height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-img-top{
     width: 50%;
     height: 50%;
+    object-fit: cover;
+    
 }
 .album{
     margin-top: 50px;

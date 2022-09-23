@@ -89,8 +89,8 @@ function body() {
 
     <div class="col" key={index}>  
 
-        <div className="card shadow-sm">
-          <img src={catagory.imagen} alt=''className="bd-placeholder-img card-img-top"    width="10" height="100"  preserveAspectRatio="xMidYMid slice" focusable="false"/>
+        <div className="card shadow-sm item-recipe">
+          <img src={catagory.imagen} alt=''className="card-img-top"    width="50" height="50"  preserveAspectRatio="xMidYMid slice" focusable="false"/>
           <div className="card-body"> 
           
 

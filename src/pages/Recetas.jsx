@@ -128,9 +128,9 @@ function Recetas() {
       {
         recipesData.map((recipes,index )=>(
       <div className="col" key={index}>
-        <div className="card shadow-sm">
+        <div className="card shadow-sm item-recipe">
          
-          <img src={recipes.imagen} alt=''className="bd-placeholder-img card-img-top"    width="100%" height="200"  preserveAspectRatio="xMidYMid slice" focusable="false"/>
+          <img src={recipes.imagen} alt=''className=" card-img-top"    width="50%" height="50"  preserveAspectRatio="xMidYMid slice" focusable="false"/>
           <div className="card-body"> 
           
 
