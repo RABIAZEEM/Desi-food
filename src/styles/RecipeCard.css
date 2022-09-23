@@ -1,0 +1,40 @@
+.Aloo ka paratha{
+    width: 40px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paratha{
+    display: flex;
+    justify-content:center;
+    margin-top: 20px;
+    padding: 10px;
+    width: 40%;
+    height: 100%;
+}
+.Ingredients{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.p{
+   
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+}
+.Description{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+.text{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+}

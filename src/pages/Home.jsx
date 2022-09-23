@@ -12,7 +12,7 @@ function Home() {
 
     <Body/>
  
-  <Link to="/Recetas"><button>Recetas</button></Link>
+  {/* <Link to="/Recetas"><button>Recetas</button></Link> */}
  
     
     </>

@@ -1,8 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import Header from '../components/Header';
 import { Link } from 'react-router-dom';
-import logo from '../assets/img/logo.png';
-import img from '../assets/img/heart.png';
+
 import image from '../assets/img/background Image.jpg';
 import paratha from '../assets/img/paratha.png'
 import chanay from '../assets/img/chanay.jpg'
@@ -13,6 +12,7 @@ import paye from '../assets/img/paye.jpg'
 import anda from '../assets/img/anda.jpg'
 import chaye from '../assets/img/chaye.jpg'
 import omelete from '../assets/img/omelete.jpg'
+import haleem from '../assets/img/haleem.webp'
 import '../styles/Recetas.css'
 import '../assets/fonts/fonts.css';
  
@@ -22,6 +22,7 @@ const recipes=[
     id: 1,
     nombre: "aloo ka paratha",
     imagen: paratha,
+    video:  <iframe width="560" height="315" src="https://www.youtube.com/embed/5xLl6urVixg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   ,
     ingredients:" boiled potatoes,flour,all spices,oil",
     description: "prepare dough with flour and water.mix all the spices in boild and mashed potatoes.make two samall rounds with the dough put potatoes in one round and cover with the other.roll them and cook it in pan using oil untill golden browen from both sides"    
    },
@@ -80,13 +81,22 @@ const recipes=[
     imagen: omelete,
     ingridients:"eggs,onion,tomatoes,green chilies,fresh coriender, salt,black paper,chili flax,turmeric powder",
     description:"In a bowel add eggs add all the ingridients and spices mix them well.In a pan add oil then put all the mixture in the pan cover it with the lid leave for 3 to 4 minutes. change the side carefully cover and cook for another 3 minutes.Dish out and serve it with bread slices or paratha"
+   },
+   {
+    id:10,
+    nombre: "haleem",
+    imagen: haleem,
+    ingridients: "boneless meat,onions,ginger garlic,tomatoes,green chilies,all spices,4 lentals,rice,wheat",
+    description:"In a bowl mix all the lentals,rice and wheat.wash them and soak for 2 hours.in a big pan add oil put the boneless meat fry it until change the colour add onions,ginger garlic and tomatoes cook them for 5 minutes add all spices cook for another 2 minutes.add water cover it cook it until the meat gets tender.in other pan add all soacked lentels cook them untill gets tender then mix them in meat and mashed them all cook it untill get a thick consistency.make a tarka with onions mix it in haleem garnish it with choped ginger,green chilies and fresh coriender."
    }
 ]
 function Recetas() {
  const [recipesData, setRecipesData]=useState([])
+ 
  useEffect(() => {
-  fetch(recipes)
-   .then(setRecipesData(recipes))
+  fetch("https://app.sheetlabs.com/MIRE/mirecipes")
+  .then(response => response.json())
+   .then(data => setRecipesData(data))
 },[])
 
   console.log(recipesData);
@@ -116,7 +126,7 @@ function Recetas() {
  
     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       {
-        recipes.map((recipes,index )=>(
+        recipesData.map((recipes,index )=>(
       <div className="col" key={index}>
         <div className="card shadow-sm">
          
@@ -128,8 +138,10 @@ function Recetas() {
             
             <div className="d-flex justify-content-between align-items-center">
               <div className="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <Link to="/RecipeCard"><button className="btn btn-sm btn-outline-secondary">RecipeCard</button></Link>
+              <Link to="/Edit"><button className="btn btn-sm btn-outline-secondary">Edit</button></Link>
+                {/* <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> */}
               </div>
              
             </div>
@@ -260,7 +272,7 @@ function Recetas() {
     </div>
   </div>
 </div>
-<Link to="/RecipeCard"><button>RecipeCard</button></Link>
+  {/* <Link to="/RecipeCard"><button>RecipeCard</button></Link> */}
 
 
     </div>

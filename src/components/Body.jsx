@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import image from '../assets/img/background Image.jpg'
 import '../styles/Body.css';
 import breakfast from '../assets/img/breakfast.png'
@@ -10,6 +11,7 @@ import everyday from '../assets/img/everyday.png'
 import kids from '../assets/img/kids.webp'
 import soup from '../assets/img/soup.png'
 import diet from '../assets/img/diet.png'
+
 
 const catagories=[
   {
@@ -96,8 +98,10 @@ function body() {
             
             <div className="d-flex justify-content-between align-items-center">
               <div className="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <Link to="/Recetas"><button  className="btn btn-sm btn-outline-secondary">Recetas</button></Link>
+              <Link to="/Edit"><button  className="btn btn-sm btn-outline-secondary">Edit</button></Link>
+                {/* <button type="button " class="btn btn-sm btn-outline-secondary">View</button> */}
+                {/* <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> */}
               </div>
              
             </div>
