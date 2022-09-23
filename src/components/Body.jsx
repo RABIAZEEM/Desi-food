@@ -88,9 +88,9 @@ function body() {
         catagories.map((catagory,index )=>(
 
     <div class="col" key={index}>  
+
         <div className="card shadow-sm">
-          
-          <img src={catagory.imagen} alt=''className="bd-placeholder-img card-img-top"    width="100%" height="200"  preserveAspectRatio="xMidYMid slice" focusable="false"/>
+          <img src={catagory.imagen} alt=''className="bd-placeholder-img card-img-top"    width="10" height="100"  preserveAspectRatio="xMidYMid slice" focusable="false"/>
           <div className="card-body"> 
           
 

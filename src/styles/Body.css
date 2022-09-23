@@ -11,6 +11,10 @@
 .Catagories{
     margin-top: 50px;
 }
+.card shadow-sm{
+    width: 50%;
+    height: 50%;
+}
 .album{
     margin-top: 50px;
 }
