@@ -11,7 +11,7 @@ function Header() {
     
 <nav className="navbar navbar-expand-xl header navbar-light bg-light">
   <div className="container-fluid">
-    <Link to="/" className="navbar-brand">Desi Recipies</Link>
+    <Link to="/" className="navbar-brand">Desi Recipes</Link>
     <img src={logo} alt="logo" className='logo'/>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBasic" aria-controls="navbarBasic" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
