@@ -3,7 +3,11 @@ import React from 'react'
 
 function searchForm() {
   return (
-    <div>searchForm</div>
+    <div>
+        <section className='search'>
+
+        </section>
+    </div>
 
   )
 }
