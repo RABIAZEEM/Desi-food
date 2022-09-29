@@ -1,12 +1,14 @@
 import React from 'react'
-import SearchForm from '../components/searchForm'
+import SearchRecipe from '../components/SearchRecipe'
 import '../styles/Search.css'
 
 function Search() {
   return (
- <div>Search</div>
+    <>
+    <SearchRecipe/>
+    </>
 
   )
 }
 
-export default Search
+export default Search;

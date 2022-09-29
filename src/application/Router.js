@@ -5,6 +5,8 @@ import Body from '../components/Body'
 import Recetas from '../pages/Recetas'
 import Login from '../pages/Login'
 import RecipeCard from '../pages/RecipeCard'
+import Edit from '../pages/Edit'
+
 
 
 
@@ -17,6 +19,9 @@ function Router() {
     <Route path='/Body'  element={<Body/>}/>
     <Route path='/Login' element={<Login/>}/>
     <Route path='/RecipeCard' element={<RecipeCard/>}/>
+    <Route path='/Edit' element={<Edit/>}/>
+   
+    
 
    
    </Routes>

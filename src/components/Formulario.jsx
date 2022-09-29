@@ -1,9 +1,10 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 
 function Formulario() {
   return (
-    // <div>fomulario</div>
+  
     <div>
    
     <section className='form-Login'>
@@ -15,6 +16,7 @@ function Formulario() {
             <input class="controls" type="password" nombre="password" id="name" placeholder="password plz"/>
             <p>I am agree to terms and conditions</p>
             <input class="buttons" type="submit" value="Register"/>
+            {/* <Link to="/Register"><button>Register</button></Link> */}
             <p><a href="#">¿already have an acout?</a></p>
 
        

@@ -1,7 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import Header from '../components/Header';
 import { Link } from 'react-router-dom';
-
 import image from '../assets/img/background Image.jpg';
 import paratha from '../assets/img/paratha.png'
 import chanay from '../assets/img/chanay.jpg'
@@ -30,7 +29,7 @@ const recipes=[
     id:2,
     nombre: "Naan chanay",
     imagen: chanay,
-    ingredients: "chickpeas,oil,tomato puri,ginger garlic paste,yogurt,all spices,water,green chilies and fresh coriender for garnish",
+    ingredients: "chickpeas,oil,tomato puree,ginger garlic paste,yogurt,all spices,water,green chilies and fresh coriender for garnish",
     description: "In a pan add some oil add ginger garlic paste saute them add tomato puri cook them for 2 minutes then add all spices add chickpeas mix them together add some water cover them for 5 minutes then add yogurt cook for other 5 minutes add fresh coriender and green chili for garnish.serve them with naan. "
    },
    {
@@ -111,7 +110,7 @@ function Recetas() {
     <div className='imagen'>
     <img src={image} alt='' className='img-fluid'/>
     </div>
-  <h1 className="fw-light">Catagories</h1>
+  <h1 className="fw-light">Breakfast</h1>
   </div>
 
   <div className="col-lg-6 col-md-8 mx-auto">
